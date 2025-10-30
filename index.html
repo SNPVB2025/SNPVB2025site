@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SNPVB 2025 - Premier Séminaire National</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0b4d2c, #1a5f3e);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER LOGOS */
+    .header-logos {
+      display: flex;
+      align-items: center;
+      gap: 190px;
+      margin-left: auto;
+      margin-right: 90px;
+    }
+
+    .header-logos img {
+      height: 90px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .navbar {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.4em;
+      color: #66ff99;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #66ff99;
+      border-bottom: 2px solid #66ff99;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(102, 255, 153, 0.2);
+    }
+
+    h1, h2, h3 {
+      color: #66ff99;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      margin-top: 30px;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      margin-top: 20px;
+    }
+
+    p, li {
+      line-height: 1.8;
+      font-size: 1.05em;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-position: inside;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+
+    .highlight-box {
+      background: rgba(102, 255, 153, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #66ff99;
+      margin: 20px 0;
+    }
+
+    .date-box {
+      background: rgba(255, 102, 102, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #ff6666;
+      margin: 15px 0;
+    }
+
+    .theme-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .theme-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(102, 255, 153, 0.3);
+    }
+
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .member-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.95em;
+    }
+
+    .btn-register {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 1.1em;
+      background: linear-gradient(135deg, #66ff99, #44cc77);
+      color: #0b4d2c;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .btn-register:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(102, 255, 153, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: rgba(0, 0, 0, 0.2);
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: auto;
+    }
+
+    .page-section {
+      display: none;
+    }
+
+    .page-section.active {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .committee-grid {
+        grid-template-columns: 1fr;
+      }
+      .header-logos {
+        margin-left: 0;
+        margin-right: 0;
+        gap: 20px;
+      }
+      .header-logos img {
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">SNPVB 2025</div>
+    
+    <!-- HEADER LOGOS -->
+    <div class="header-logos">
+      <img src="logo-fac-science-1.png" alt="Université Badji Mokhtar Annaba" />
+      <img src="images (3).jpg" alt="Laboratoire de Biologie Végétale et Environnement" />
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="#" data-page="home" class="nav-link active">Accueil</a></li>
+      <li><a href="#" data-page="themes" class="nav-link">Thématiques</a></li>
+      <li><a href="#" data-page="instructions" class="nav-link">Instructions</a></li>
+      <li><a href="#" data-page="comites" class="nav-link">Comités</a></li>
+      <li><a href="#" data-page="about" class="nav-link">À propos</a></li>
+      <li><a href="#" data-page="contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <div id="home" class="page-section active">
+    <div class="container">
+      <h1>🌿 PREMIER SÉMINAIRE NATIONAL EN PHYTOBIOLOGIE<br>ET VALORISATION DES BIORESSOURCES</h1>
+      
+      <div class="highlight-box">
+        <h2>📅 26 et 27 Novembre 2025</h2>
+        <p><strong>Format:</strong> En ligne (ONLINE)</p>
+        <p><strong>Organisé par:</strong> Université Badji Mokhtar-Annaba<br>
+        Faculté des Sciences - Département de Biologie<br>
+        Laboratoire de Biologie Végétale et Environnement</p>
+      </div>
+
+      <div class="date-box">
+        <h3>📌 Dates Importantes</h3>
+        <p><strong>10 novembre 2025:</strong> Date limite de réception des résumés</p>
+        <p><strong>15 novembre 2025:</strong> Notification d'acceptation des résumés</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="https://forms.gle/VesyQZuB3vGGvqmL8" target="_blank" class="btn-register">
+          📝 S'inscrire maintenant
+        </a>
+      </div>
+
+      <h2>Préambule</h2>
+      <p>L'Algérie se caractérise par une exceptionnelle richesse floristique, abritant un nombre considérable d'espèces aromatiques, médicinales et endémiques. Cette diversité remarquable résulte de la variété des conditions géographiques et climatiques du pays, qui s'étend des zones méditerranéennes et montagnardes, jusqu'aux vastes régions sahariennes.</p>
+      
+      <p>Les plantes algériennes trouvent de multiples applications dans la médecine traditionnelle et moderne, l'industrie pharmaceutique et cosmétique, ainsi que dans la gastronomie. Par ailleurs, elles jouent un rôle écologique fondamental dans la préservation de la biodiversité et la stabilité des écosystèmes, notamment à travers leurs interactions avec d'autres organismes.</p>
+      
+      <p>Cette richesse floristique représente un potentiel considérable pour la valorisation des bioressources, en particulier par l'identification d'espèces adaptées à la phytoremédiation et à la production de biomolécules d'intérêt. Dans cette perspective, le présent événement scientifique vise à favoriser les échanges entre chercheurs, encourageant ainsi le partage d'expériences et de résultats de recherche autour de la valorisation des bioressources végétales d'Algérie.</p>
+    </div>
+    <footer><p>© 2025 Université Badji Mokhtar-Annaba - Tous droits réservés</p></footer>
+  </div>
+
+  <!-- THEMES -->
+  <div id="themes" class="page-section">
+    <div class="container">
+      <h1>🌱 Thématiques du Séminaire</h1>
+      
+      <div class="theme-card">
+        <h3>Thème 1: Substances Naturelles Végétales et Santé</h3>
+        <p>Exploration des composés bioactifs des plantes et leur application en médecine traditionnelle et moderne, industrie pharmaceutique et cosmétique.</p>
+      </div>
+
+      <div class="theme-card">
+        <h3>Thème 2: Symbioses Végétales - Interactions et Enjeux Écologiques</h3>
+        <p>Étude des relations symbiotiques entre plantes et autres organismes, et leur rôle dans la préservation de la biodiversité et la stabilité des écosystèmes.</p>
+      </div>
+
+      <div class="theme-card">
+        <h3>Thème 3: Phytoremédiation et Lutte Biologique</h3>
+        <p>Identification et valorisation des espèces végétales adaptées à la dépollution des sols et à la lutte biologique contre les ravageurs.</p>
+      </div>
+
+      <div class="theme-card">
+        <h3>Thème 4: Palynologie et ses Applications</h3>
+        <p>Applications de la palynologie dans divers domaines scientifiques et environnementaux.</p>
+      </div>
+    </div>
+    <footer><p>© 2025 Université Badji Mokhtar-Annaba - Tous droits réservés</p></footer>
+  </div>
+
+  <!-- INSTRUCTIONS -->
+  <div id="instructions" class="page-section">
+    <div class="container">
+      <h1>📋 Instructions aux Auteurs</h1>
+      
+      <div class="highlight-box">
+        <h3>Format du Résumé</h3>
+        <ul>
+          <li><strong>Langue:</strong> Français ou Anglais</li>
+          <li><strong>Longueur:</strong> Maximum 250 mots</li>
+          <li><strong>Police:</strong> Times New Roman 12, interligne simple</li>
+        </ul>
+      </div>
+
+      <h3>Structure Requise</h3>
+      <p>Le résumé doit inclure:</p>
+      <ul>
+        <li>La méthodologie</li>
+        <li>Les principaux résultats</li>
+        <li>Jusqu'à 5 mots-clés</li>
+      </ul>
+
+      <h3>Mise en Forme</h3>
+      <ul>
+        <li><strong>Titre:</strong> Police 14, en gras, centré, en minuscules</li>
+        <li><strong>Auteur principal:</strong> Police 14, en gras et souligné</li>
+        <li><strong>Affiliation des auteurs:</strong> Police 9, complète</li>
+      </ul>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="https://forms.gle/VesyQZuB3vGGvqmL8" target="_blank" class="btn-register">
+          📤 Soumettre votre résumé
+        </a>
+      </div>
+    </div>
+    <footer><p>© 2025 Université Badji Mokhtar-Annaba - Tous droits réservés</p></footer>
+  </div>
+
+  <!-- COMITES -->
+  <div id="comites" class="page-section">
+    <div class="container">
+      <h1>👥 Comités d'Organisation</h1>
+      
+      <h2>Comité Scientifique</h2>
+      <div class="committee-grid">
+        <div class="member-card"><strong>Pr. Émérite Seridi Ratiba</strong> (Présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. Ali Ahmed Monia</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. Sadou Nina</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. Ali Rachedi Fahima</strong> (Univ. Souk Ahras)</div>
+        <div class="member-card"><strong>Pr. Boughendjioua Hicham</strong> (ENSET. Skikda)</div>
+        <div class="member-card"><strong>Pr. Haouam Lynda</strong> (Univ. Souk Ahras)</div>
+        <div class="member-card"><strong>Pr. Laredj Hacène</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. Bendif Hamedi</strong> (Univ. Msila)</div>
+        <div class="member-card"><strong>Pr. Benkherara Salah</strong> (Univ. Ghardaia)</div>
+        <div class="member-card"><strong>Pr. Chefrour Azzedine</strong> (Univ. Souk Ahras)</div>
+        <div class="member-card"><strong>Pr. Hamel Tarek</strong> (Univ. Annaba)</div>
+      </div>
+
+      <h2 style="margin-top: 40px;">Comité d'Organisation</h2>
+      <div class="committee-grid">
+        <div class="member-card"><strong>Pr. Bekhouche Fatiha</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Tahar Wafa</strong> (Présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Soufiane Ismahene</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Aimeur Nadjette</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Bouzebda Abderrezak</strong> (Univ. Skikda)</div>
+        <div class="member-card"><strong>Dr. Laouar Hadia</strong> (Univ. Guelma)</div>
+        <div class="member-card"><strong>Dr. Bourouhou Mourad</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Meraghni Messaouda</strong> (Vice-présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Boudiaf Imène</strong> (Vice-présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Hassaine Amina</strong> (Vice-présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Meksem Nabila</strong> (Vice-présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Fetnaci Imene</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Laskri Hadjer</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Ouchtati Sara</strong> (Univ. Skikda)</div>
+        <div class="member-card"><strong>Dr. Daroui Atika</strong> (Univ. Sétif)</div>
+        <div class="member-card"><strong>Dr. Ziat Nour El Houda</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Ounnas Soraya</strong> (Univ. Annaba)</div>
+      </div>
+    </div>
+    <footer><p>© 2025 Université Badji Mokhtar-Annaba - Tous droits réservés</p></footer>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" class="page-section">
+    <div class="container">
+      <h1>ℹ️ À propos</h1>
+      <p>Le SNPVB 2025 est une initiative scientifique organisée par la Faculté des Sciences de l'Université Badji Mokhtar d'Annaba, visant à promouvoir la recherche et la valorisation des ressources végétales algériennes.</p>
+    </div>
+    <footer><p>© 2025 Université Badji Mokhtar-Annaba - Tous droits réservés</p></footer>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" class="page-section">
+    <div class="container">
+      <h1>📞 Contact</h1>
+      <p>Pour toute question ou demande d'information :</p>
+      <ul>
+        <li>📧 Email : <a href="mailto:snpvb2025@gmail.com" style="color:#66ff99;">snpvb2025@gmail.com</a></li>
+      </ul>
+    </div>
+    <footer><p>© 2025 Université Badji Mokhtar-Annaba - Tous droits réservés</p></footer>
+  </div>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.page-section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = link.getAttribute('data-page');
+        
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        
+        sections.forEach(sec => sec.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
