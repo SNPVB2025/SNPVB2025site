@@ -26,13 +26,13 @@
     .header-logos {
       display: flex;
       align-items: center;
-      gap: 190px;
+      gap: 110px;
       margin-left: auto;
       margin-right: 90px;
     }
 
     .header-logos img {
-      height: 90px;
+      height: 80px;
       width: auto;
       object-fit: contain;
     }
@@ -224,94 +224,116 @@
       display: block;
     }
 
-    /* Decorative floating elements */
-   /* Decorative floating elements */
-/* Floating background decorations */
+    /* Floating background decorations */
+    .floating-decoration {
+      position: fixed;
+      pointer-events: none;
+      opacity: 0.4;
+      z-index: 1;
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      animation: float 25s infinite ease-in-out;
+    }
 
+    .decoration-1 {
+      width: 220px;
+      height: 220px;
+      background-image: url('WhatsApp%20Image%202025-11-02%20at%206.54.49%20PM.jpeg');
+      top: 5%;
+      left: 3%;
+      animation-duration: 22s;
+    }
 
-/* Floating background decorations */
-.floating-decoration {
-  position: fixed;
-  pointer-events: none;
-  opacity: 0.4; /* 40% opacity */
-  z-index: 1;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  animation: float 25s infinite ease-in-out;
-}
+    .decoration-2 {
+      position: fixed;
+      width: 200px;
+      height: 200px;
+      background-image: url('WhatsApp%20Image%202025-11-02%20at%206.56.04%20PM.jpeg');
+      background-size: cover;
+      background-position: center;
+      top: 5%;
+      right: 3%;
+      animation-duration: 26s;
+      transition: transform 0.1s ease-out, opacity 0.3s ease-out;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.4;
+      border-radius: 20px;
+    }
 
-/* Place images at the sides and corners for better visibility */
-.decoration-1 {
-  width: 220px; height: 220px;
-  background-image: url('WhatsApp%20Image%202025-11-02%20at%206.54.49%20PM.jpeg');
-  top: 5%; left: 3%;
-  animation-duration: 22s;
-}
+    .decoration-3 {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background-image: url('WhatsApp%20Image%202025-11-02%20at%206.56.21%20PM.jpeg');
+      background-size: cover;
+      background-position: center;
+      bottom: 10%;
+      left: 25%;
+      transform: translate(-50%, 50%);
+      opacity: 0.4;
+      z-index: 1;
+      transition: transform 0.1s ease-out, opacity 0.3s ease-out;
+      pointer-events: none;
+      border-radius: 20px;
+    }
 
-.decoration-2 {
-  width: 200px; height: 200px;
-  background-image: url('WhatsApp%20Image%202025-11-02%20at%206.56.04%20PM.jpeg');
-  top: 5%; right: 3%;
-  animation-duration: 26s;
-}
+    .decoration-4 {
+      position: fixed;
+      width: 240px;
+      height: 240px;
+      background-image: url('WhatsApp%20Image%202025-11-02%20at%207.05.01%20PM.jpeg');
+      background-size: cover;
+      background-position: center;
+      bottom: 2%;
+      right: 3%;
+      animation-duration: 30s;
+      transition: transform 0.1s ease-out, opacity 0.3s ease-out;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.4;
+      border-radius: 20px;
+    }
 
-.decoration-3 {
-  width: 230px; height: 230px;
-  background-image: url('WhatsApp%20Image%202025-11-02%20at%206.56.21%20PM.jpeg');
-  bottom: 5%; left: 3%;
-  animation-duration: 28s;
-}
+    .decoration-5 {
+      width: 180px;
+      height: 180px;
+      background-image: url('WhatsApp%20Image%202025-11-02%20at%207.06.21%20PM.jpeg');
+      top: 40%;
+      left: 1%;
+      animation-duration: 32s;
+    }
 
-.decoration-4 {
-  width: 240px; height: 240px;
-  background-image: url('WhatsApp%20Image%202025-11-02%20at%207.05.01%20PM.jpeg');
-  bottom: 2%; right: 3%;
-  animation-duration: 30s;
-}
+    .decoration-6 {
+      width: 200px;
+      height: 200px;
+      background-image: url('WhatsApp%20Image%202025-11-02%20at%207.45.50%20PM.jpeg');
+      top: 40%;
+      right: 1%;
+      animation-duration: 34s;
+    }
 
-.decoration-5 {
-  width: 180px; height: 180px;
-  background-image: url('WhatsApp%20Image%202025-11-02%20at%207.06.21%20PM.jpeg');
-  top: 40%; left: 1%;
-  animation-duration: 32s;
-}
-
-.decoration-6 {
-  width: 200px; height: 200px;
-  background-image: url('WhatsApp%20Image%202025-11-02%20at%207.45.50%20PM.jpeg');
-  top: 40%; right: 1%;
-  animation-duration: 34s;
-}
-
-.decoration-7 {
-  width: 260px; height: 260px;
-  background-image: url('WhatsApp%20Image%202025-11-02%20at%207.46.13%20PM.jpeg');
-  bottom: 40%; left: 50%;
-  transform: translateX(-50%);
-  animation-duration: 36s;
-}
-
-/* Floating keyframes */
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-15px) rotate(2deg); }
-  50% { transform: translateY(15px) rotate(-2deg); }
-  75% { transform: translateY(-10px) rotate(1deg); }
-}
-
-
-
+    .decoration-7 {
+      width: 200px;
+      height: 200px;
+      background-image: url('WhatsApp%20Image%202025-11-02%20at%207.46.13%20PM.jpeg');
+      bottom: 1%;
+      left: 1%;
+      transform: translateX(-50%);
+      animation-duration: 36s;
+    }
 
     @keyframes float {
       0%, 100% { transform: translateY(0) rotate(0deg); }
-      33% { transform: translateY(-30px) rotate(5deg); }
-      66% { transform: translateY(20px) rotate(-5deg); }
+      25% { transform: translateY(-15px) rotate(2deg); }
+      50% { transform: translateY(15px) rotate(-2deg); }
+      75% { transform: translateY(-10px) rotate(1deg); }
     }
 
     @media (max-width: 768px) {
       .navbar {
-        padding: 15px 20px;
+        padding: 10px 10px;
         flex-direction: column;
         gap: 15px;
       }
@@ -326,7 +348,7 @@
       .header-logos {
         margin-left: 0;
         margin-right: 0;
-        gap: 20px;
+        gap: 12px;
       }
       .header-logos img {
         height: 40px;
@@ -336,15 +358,13 @@
 </head>
 <body>
   <!-- Floating decorative elements -->
-  <!-- Floating decorative elements -->
-<div class="floating-decoration decoration-1"></div>
-<div class="floating-decoration decoration-2"></div>
-<div class="floating-decoration decoration-3"></div>
-<div class="floating-decoration decoration-4"></div>
-<div class="floating-decoration decoration-5"></div>
-<div class="floating-decoration decoration-6"></div>
-<div class="floating-decoration decoration-7"></div>
-
+  <div class="floating-decoration decoration-1"></div>
+  <div class="floating-decoration decoration-2"></div>
+  <div class="floating-decoration decoration-3"></div>
+  <div class="floating-decoration decoration-4"></div>
+  <div class="floating-decoration decoration-5"></div>
+  <div class="floating-decoration decoration-6"></div>
+  <div class="floating-decoration decoration-7"></div>
 
   <nav class="navbar">
     <div class="logo">SNPVB 2025</div>
@@ -352,12 +372,14 @@
     <!-- HEADER LOGOS -->
     <div class="header-logos">
       <img src="logo-fac-science-1.png" alt="Université Badji Mokhtar Annaba" />
+      <img src="t.jpg" alt="Logo de conference" />
       <img src="images (3).jpg" alt="Laboratoire de Biologie Végétale et Environnement" />
     </div>
     
     <ul class="nav-links">
       <li><a href="#" data-page="home" class="nav-link active">Accueil</a></li>
       <li><a href="#" data-page="themes" class="nav-link">Thématiques</a></li>
+      <li><a href="#" data-page="programme" class="nav-link">Programme</a></li>
       <li><a href="#" data-page="instructions" class="nav-link">Instructions</a></li>
       <li><a href="#" data-page="comites" class="nav-link">Comités</a></li>
       <li><a href="#" data-page="about" class="nav-link">À propos</a></li>
@@ -384,12 +406,15 @@
         <p><strong>15 novembre 2025:</strong> Notification d'acceptation des résumés</p>
       </div>
 
-      <div style="text-align: center; margin-top: 30px;">
+      <div style="text-align: center; margin-top: 30px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
         <a href="https://forms.gle/VesyQZuB3vGGvqmL8" target="_blank" class="btn-register">
           📝 S'inscrire maintenant
         </a>
+        <a href="brochure.pdf" target="_blank" class="btn-register" style="background: linear-gradient(135deg, #66ccff, #4499cc);">
+          📄 Télécharger la brochure
+        </a>
       </div>
-
+      
       <h2>Préambule</h2>
       <p>L'Algérie se caractérise par une exceptionnelle richesse floristique, abritant un nombre considérable d'espèces aromatiques, médicinales et endémiques. Cette diversité remarquable résulte de la variété des conditions géographiques et climatiques du pays, qui s'étend des zones méditerranéennes et montagnardes, jusqu'aux vastes régions sahariennes.</p>
       
@@ -423,6 +448,38 @@
       <div class="theme-card">
         <h3>Thème 4: Palynologie et ses Applications</h3>
         <p>Applications de la palynologie dans divers domaines scientifiques et environnementaux.</p>
+      </div>
+    </div>
+    <footer><p>© 2025 Université Badji Mokhtar-Annaba - Tous droits réservés</p></footer>
+  </div>
+
+  <!-- PROGRAMME -->
+  <div id="programme" class="page-section">
+    <div class="container">
+      <h1>📅 Programme du Colloque</h1>
+      
+      <div class="highlight-box" style="text-align: center;">
+        <h2 style="margin-bottom: 15px;">📥 Téléchargez dès maintenant le programme détaillé du colloque</h2>
+        <p style="font-size: 1.1em; margin-bottom: 25px;">Découvrez l'ensemble des conférences et interventions prévues</p>
+      </div>
+
+      <div style="text-align: center; margin: 40px 0;">
+        <a href="programme-snpvb2025.pdf" download class="btn-register" style="background: linear-gradient(135deg, #ff9966, #ff6633); font-size: 1.2em; padding: 20px 50px;">
+          📄 Télécharger le Programme Complet
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="calendrier-conference.pdf" download class="btn-register" style="background: linear-gradient(135deg, #9966ff, #6633ff); font-size: 1.2em; padding: 20px 50px;">
+          📆 Télécharger le Calendrier des Conférences
+        </a>
+      </div>
+
+      <div class="date-box" style="margin-top: 40px;">
+        <h3>🕐 Aperçu du Programme</h3>
+        <p><strong>Jour 1 - 26 Novembre 2025:</strong> Conférences plénières et sessions thématiques</p>
+        <p><strong>Jour 2 - 27 Novembre 2025:</strong> Présentations orales et tables rondes</p>
+        <p style="margin-top: 15px; font-style: italic;">Le programme détaillé sera régulièrement mis à jour. Consultez les documents téléchargeables pour plus d'informations.</p>
       </div>
     </div>
     <footer><p>© 2025 Université Badji Mokhtar-Annaba - Tous droits réservés</p></footer>
@@ -469,42 +526,76 @@
   <!-- COMITES -->
   <div id="comites" class="page-section">
     <div class="container">
-      <h1>👥 Comités d'Organisation</h1>
+      <h1>👥 Comités </h1>
       
-      <h2>Comité Scientifique</h2>
+      <h2>Président d'Honneur</h2>
       <div class="committee-grid">
-        <div class="member-card"><strong>Pr. Émérite Seridi Ratiba</strong> (Présidente, Univ. Annaba)</div>
-        <div class="member-card"><strong>Pr. Ali Ahmed Monia</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Pr. Sadou Nina</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Pr. Ali Rachedi Fahima</strong> (Univ. Souk Ahras)</div>
-        <div class="member-card"><strong>Pr. Boughendjioua Hicham</strong> (ENSET. Skikda)</div>
-        <div class="member-card"><strong>Pr. Haouam Lynda</strong> (Univ. Souk Ahras)</div>
-        <div class="member-card"><strong>Pr. Laredj Hacène</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Pr. Bendif Hamedi</strong> (Univ. Msila)</div>
-        <div class="member-card"><strong>Pr. Benkherara Salah</strong> (Univ. Ghardaia)</div>
-        <div class="member-card"><strong>Pr. Chefrour Azzedine</strong> (Univ. Souk Ahras)</div>
-        <div class="member-card"><strong>Pr. Hamel Tarek</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. MANAA Mohamed</strong><br>Recteur de l'Université de Annaba</div>
+        <div class="member-card"><strong>Pr. DJEBABLA Abdelhak</strong><br>Doyen de la Faculté des Sciences</div>
+        <div class="member-card"><strong>Pr. SERIDI Ratiba</strong><br>Directrice du Laboratoire<br>Professeur émérite à la retraite</div>
+      </div>
+
+      <h2 style="margin-top: 40px;">Présidente du Séminaire</h2>
+      <div class="highlight-box" style="text-align: center;">
+        <h3 style="margin-bottom: 10px;">Pr. SADOU NINA</h3>
+      </div>
+      
+      <h2 style="margin-top: 40px;">Comité Scientifique</h2>
+      <div class="committee-grid">
+        <div class="member-card"><strong>Pr. Émérite Seridi Ratiba</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. Ali Ahmed Monia</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. Sadou Nina</strong><br>(Présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. Ali Rachedi Fahima</strong><br>(Univ. Souk Ahras)</div>
+        <div class="member-card"><strong>Pr. Boughendjioua Hicham</strong><br>(ENSET. Skikda)</div>
+        <div class="member-card"><strong>Pr. Haouam Lynda</strong><br>(Univ. Souk Ahras)</div>
+        <div class="member-card"><strong>Pr. Laredj Hacène</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. Bendif Hamedi</strong><br>(Univ. Msila)</div>
+        <div class="member-card"><strong>Pr. Benkherara Salah</strong><br>(Univ. Ghardaia)</div>
+        <div class="member-card"><strong>Pr. Chefrour Azzedine</strong><br>(Univ. Souk Ahras)</div>
+        <div class="member-card"><strong>Pr. Hamel Tarek</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Boudiaf Imène</strong><br>(vice-présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Hassaine Amina</strong><br>(vice-présidente Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Ziane Hana</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Slimani Abderachid</strong><br>(Univ.Annaba)</div>
+        <div class="member-card"><strong>Dr. Manamani Mahbouba</strong><br>(Univ. Souk Ahras)</div>
+        <div class="member-card"><strong>Dr. Boumedris Zineddine</strong><br>(Univ. ELTarf)</div>
+        <div class="member-card"><strong>Dr. Messiad Rouhia</strong><br>(Univ. Guelma)</div>
+        <div class="member-card"><strong>Dr. Tlili Nadia</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Zaoui Lylia</strong><br>(Univ. Skikda)</div>
+        <div class="member-card"><strong>Dr. Attab Saliha</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Chaker Amina</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Ksentini Hana</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Necib Asma</strong><br>(Univ. Souk Ahras)</div>
+        <div class="member-card"><strong>Dr. Brakni Rafika</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Gali Lynda</strong><br>(CRBT.Constantine)</div>
+        <div class="member-card"><strong>Dr. Adouane Meriem</strong><br>(ENSF. Khenchela)</div>
+        <div class="member-card"><strong>Dr. Bouakkadia Hayette</strong><br>(Univ. Batna 1)</div>
+        <div class="member-card"><strong>Dr. Ketif Amel</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Kout Samia</strong><br>(CRSP. Constantine)</div>
       </div>
 
       <h2 style="margin-top: 40px;">Comité d'Organisation</h2>
       <div class="committee-grid">
-        <div class="member-card"><strong>Pr. Bekhouche Fatiha</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Tahar Wafa</strong> (Présidente, Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Soufiane Ismahene</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Aimeur Nadjette</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Bouzebda Abderrezak</strong> (Univ. Skikda)</div>
-        <div class="member-card"><strong>Dr. Laouar Hadia</strong> (Univ. Guelma)</div>
-        <div class="member-card"><strong>Dr. Bourouhou Mourad</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Meraghni Messaouda</strong> (Vice-présidente, Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Boudiaf Imène</strong> (Vice-présidente, Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Hassaine Amina</strong> (Vice-présidente, Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Meksem Nabila</strong> (Vice-présidente, Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Fetnaci Imene</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Laskri Hadjer</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Ouchtati Sara</strong> (Univ. Skikda)</div>
-        <div class="member-card"><strong>Dr. Daroui Atika</strong> (Univ. Sétif)</div>
-        <div class="member-card"><strong>Dr. Ziat Nour El Houda</strong> (Univ. Annaba)</div>
-        <div class="member-card"><strong>Dr. Ounnas Soraya</strong> (Univ. Annaba)</div>
+        <div class="member-card"><strong>Pr. Bekhouche Fatiha</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Tahar Wafa</strong><br>(Présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Soufiane Ismahene</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Aimeur Nadjette</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Bouzebda Abderrezak</strong><br>(Univ. Skikda)</div>
+        <div class="member-card"><strong>Dr. Laouar Hadia</strong><br>(Univ.Guelma)</div>
+        <div class="member-card"><strong>Dr. Bourouhou Mourad</strong><br>(Univ.Annaba)</div>
+        <div class="member-card"><strong>Dr. Meraghni Messaouda</strong><br>(vice-présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Fetnaci Imene</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Laskri Hadjer</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Ouchtati Sara</strong><br>(Univ. Skikda)</div>
+        <div class="member-card"><strong>Dr. Daroui Atika</strong><br>(Univ. Sétif)</div>
+        <div class="member-card"><strong>Dr. Meksem Nabila</strong><br>(vice-présidente, Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Ziat Nour El Houda</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Ounnas Soraya</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Dr. Benhadid Ryme</strong><br>(Univ. ELTarf)</div>
+        <div class="member-card"><strong>Dr. Refes-Sahri Fatma</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Mme. Gurib Ismahene</strong><br>(Univ. Annaba)</div>
+        <div class="member-card"><strong>Mlle Ouennougui Nesma</strong><br>(Doctorante, Univ. Annaba)</div>
+        <div class="member-card"><strong>Mlle Boutemedjet Imene</strong><br>(Doctorante, Univ. Annaba)</div>
       </div>
     </div>
     <footer><p>© 2025 Université Badji Mokhtar-Annaba - Tous droits réservés</p></footer>
